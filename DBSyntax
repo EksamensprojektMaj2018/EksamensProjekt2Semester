@@ -1,0 +1,37 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Role] (
+    [RoleId]   INT           IDENTITY (1, 1) NOT NULL,
+    [RoleName] NVARCHAR (50) NOT NULL
+);
+
+CREATE TABLE [dbo].[Priority] (
+    [PriorityId]   INT           IDENTITY (1, 1) NOT NULL,
+    [PriorityName] NVARCHAR (50) NOT NULL
+);
+
+CREATE TABLE [dbo].[Category] (
+    [CategoryId] INT           IDENTITY (1, 1) NOT NULL,
+    [Category]   NVARCHAR (50) NOT NULL
+);
+
+CREATE TABLE [dbo].[Tickets] (
+    [TicketId] INT            IDENTITY (1, 1) NOT NULL,
+    [Message]  NVARCHAR (MAX) NOT NULL,
+    [Priority] INT            NOT NULL,
+    [Topic]    NVARCHAR (50)  NOT NULL,
+    [Category] INT            NOT NULL
+);
+
+CREATE TABLE [dbo].[User] (
+    [UserId]   INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Email]    NVARCHAR (50) NOT NULL,
+    [Password] NVARCHAR (50) NOT NULL,
+    [Role]     INT           NOT NULL,
+    [Company]  NVARCHAR (50) NULL
+);
