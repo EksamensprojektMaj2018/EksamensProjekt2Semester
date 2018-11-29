@@ -119,7 +119,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\Base\DomainClassBase.cs" />
+    <Compile Include="Data\Base\IDomainClass.cs" />
     <Compile Include="Data\Domain\Category.cs" />
+    <Compile Include="Data\Logic\TicketIdLogic.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -166,9 +169,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Command\App\" />
+    <Folder Include="Command\Base\" />
+    <Folder Include="Model\App\" />
+    <Folder Include="Model\Base\" />
     <Folder Include="Model\Catelog\" />
+    <Folder Include="ViewModel\App\" />
+    <Folder Include="ViewModel\Base\" />
+    <Folder Include="ViewModel\Data\" />
     <Folder Include="ViewModel\Page\" />
-    <Folder Include="View\" />
+    <Folder Include="View\Domain\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
