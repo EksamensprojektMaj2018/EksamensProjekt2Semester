@@ -19,6 +19,7 @@ namespace SupportTicketSystem
         public virtual DbSet<Priority> Priorities { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<TicketList> TicketLists { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -26,7 +27,7 @@ namespace SupportTicketSystem
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=Server=tcp:supportticketdb.database.windows.net,1433;Initial Catalog=SupportTicketDB;Persist Security Info=False;User ID=Hasan;Password=Basri123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Data Source=supportticketdb.database.windows.net;Initial Catalog=SupportTicketDB;Persist Security Info=True;User ID=Hasan;Password=Basri123");
             }
         }
 
@@ -79,6 +80,25 @@ namespace SupportTicketSystem
                     .HasForeignKey(d => d.Priority)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Tickets_ToPriority");
+            });
+
+            modelBuilder.Entity<TicketList>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.TicketId });
+
+                entity.ToTable("TicketList");
+
+                entity.HasOne(d => d.Ticket)
+                    .WithMany(p => p.TicketLists)
+                    .HasForeignKey(d => d.TicketId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_TicketList_ToTicketId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.TicketLists)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_TicketList_ToUserId");
             });
 
             modelBuilder.Entity<User>(entity =>
