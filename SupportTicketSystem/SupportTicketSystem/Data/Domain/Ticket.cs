@@ -10,6 +10,7 @@ namespace SupportTicketSystem
         public int Priority { get; set; }
         public string Topic { get; set; }
         public int Category { get; set; }
+        public int UserId { get; set; }
 
         public Category CategoryNavigation { get; set; }
         public Priority PriorityNavigation { get; set; }

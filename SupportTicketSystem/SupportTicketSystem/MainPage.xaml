@@ -5,16 +5,15 @@
     xmlns:local="using:SupportTicketSystem"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:SupportTicketSystem.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
+    <Page.DataContext>
+        <viewModel:TicketPageViewModel/>
+    </Page.DataContext>
     <Grid>
-        <ListView ItemsSource="{Binding AllTickets}">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:AllTickets">
-                    
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <ListView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding AllTickets}"/>
+        <!--<TextBlock Text="AAAAAAAAAAAAAAA"/>-->
     </Grid>
 </Page>
