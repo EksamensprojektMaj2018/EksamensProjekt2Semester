@@ -116,24 +116,24 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AllTickets.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Category.cs" />
     <Compile Include="Data\Base\DomainClassBase.cs" />
     <Compile Include="Data\Base\IDomainClass.cs" />
-    <Compile Include="Data\Domain\Category.cs" />
     <Compile Include="Data\Logic\TicketIdLogic.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\Domain\Priority.cs" />
+    <Compile Include="Model\TicketCatalog.cs" />
+    <Compile Include="Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data\Domain\Role.cs" />
-    <Compile Include="Data\Domain\Ticket.cs" />
-    <Compile Include="Data\Domain\User.cs" />
-    <Compile Include="Data\Context\SupportticketdbContext.cs" />
-    <Compile Include="Data\Domain\TicketList.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="SupportticketdbContext.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="ViewModel\TicketPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -161,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\TicketView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
@@ -173,6 +177,8 @@
   <ItemGroup>
     <Folder Include="Command\App\" />
     <Folder Include="Command\Base\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Domain\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
     <Folder Include="Model\Catelog\" />
