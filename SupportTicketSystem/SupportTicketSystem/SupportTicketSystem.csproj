@@ -133,6 +133,7 @@
     <Compile Include="Data\Context\SupportticketdbContext.cs" />
     <Compile Include="Data\Domain\Ticket.cs" />
     <Compile Include="Data\Domain\User.cs" />
+    <Compile Include="UserLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
