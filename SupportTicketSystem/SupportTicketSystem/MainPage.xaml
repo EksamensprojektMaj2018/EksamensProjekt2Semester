@@ -12,8 +12,36 @@
     <Page.DataContext>
         <viewModel:TicketPageViewModel/>
     </Page.DataContext>
-    <Grid>
+    <!--<Grid>
         <ListView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding AllTickets}"/>
-        <!--<TextBlock Text="AAAAAAAAAAAAAAA"/>-->
+        <TextBlock Text="AAAAAAAAAAAAAAA"/>
+    </Grid>-->
+    <Page.Resources>
+        <Style x:Key="TextBlockDetailsStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+            
+            
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <ListView Grid.Column="0" Grid.Row="0"
+                  ItemsSource="{Binding AllTickets}"
+                  SelectedItem="{Binding TicketSelected, Mode=TwoWay}">
+        </ListView>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+            <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Priority}" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Category}" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle}"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -18,7 +18,7 @@ namespace SupportTicketSystem
 
         public override string ToString()
         {
-            return Message;
+            return Topic;
         }
     }
 }
