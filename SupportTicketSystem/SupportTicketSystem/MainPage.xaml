@@ -9,13 +9,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <viewModel:TicketPageViewModel/>
     </Page.DataContext>
-    <!--<Grid>
+    --><!--<Grid>
         <ListView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding AllTickets}"/>
         <TextBlock Text="AAAAAAAAAAAAAAA"/>
-    </Grid>-->
+    </Grid>--><!--
     <Page.Resources>
         <Style x:Key="TextBlockDetailsStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
@@ -43,5 +43,28 @@
             <TextBlock Text="{Binding TicketSelected.Category}" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle}"/>
         </StackPanel>
-    </Grid>
+    </Grid>-->
+
+    
+
+        <Page.DataContext>
+            <local:UserLoginPageViewModel/>
+        </Page.DataContext>
+
+        <Grid Margin="12">
+            <StackPanel>
+                <TextBlock>Username:</TextBlock>
+                <TextBox Text="{Binding UserName, Mode = TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="UsernameTextBox"/>
+
+                <TextBlock>Password:</TextBlock>
+                <TextBox Text="{Binding Password, Mode = TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="PasswordTextBox"/>
+
+
+
+                <Button Content="Login" IsEnabled="True"></Button>
+            </StackPanel>
+        </Grid>
+
+  
+
 </Page>

@@ -120,15 +120,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
+    <Compile Include="Command\CommandBase.cs" />
+    <Compile Include="Command\INotifiableCommand.cs" />
     <Compile Include="Command\App\CreateCommand.cs" />
     <Compile Include="Data\Base\DomainClassBase.cs" />
     <Compile Include="Data\Base\IDomainClass.cs" />
     <Compile Include="Data\Logic\TicketIdLogic.cs" />
+    <Compile Include="Data\Logic\UserIdLogic.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Catelog\CreateTicketCatalog.cs" />
     <Compile Include="Model\TicketCatalog.cs" />
+    <Compile Include="Model\UserLoginCatalog.cs" />
     <Compile Include="Priority.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +140,7 @@
     <Compile Include="SupportticketdbContext.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewModel\UserLoginPageViewModel.cs" />
     <Compile Include="ViewModel\Base\CreateTicketPageViewModelBase.cs" />
     <Compile Include="ViewModel\Page\CreateTicketPageViewModel.cs" />
     <Compile Include="ViewModel\TicketPageViewModel.cs" />
@@ -166,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\UserLoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TicketView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -188,6 +197,12 @@
     <Folder Include="ViewModel\App\" />
     <Folder Include="ViewModel\Data\" />
     <Folder Include="View\Domain\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -17,6 +17,12 @@ namespace SupportTicketSystem
         public int Role { get; set; }
         public string Company { get; set; }
 
+        public User(string name, string password)
+        {
+            name = Name;
+            password = Password;
+        }
+
         public Role RoleNavigation { get; set; }
         public ICollection<Ticket> Tickets { get; set; }
     }
