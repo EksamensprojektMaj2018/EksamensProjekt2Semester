@@ -130,6 +130,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Base\ICatalog.cs" />
     <Compile Include="Model\Catelog\CreateTicketCatalog.cs" />
     <Compile Include="Model\TicketCatalog.cs" />
     <Compile Include="Model\UserLoginCatalog.cs" />
@@ -140,6 +141,10 @@
     <Compile Include="SupportticketdbContext.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewModel\Base\IDataViewModel.cs" />
+    <Compile Include="ViewModel\Base\IPageViewModel.cs" />
+    <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
+    <Compile Include="ViewModel\Base\PageViewModelStatus.cs" />
     <Compile Include="ViewModel\UserLoginPageViewModel.cs" />
     <Compile Include="ViewModel\Base\CreateTicketPageViewModelBase.cs" />
     <Compile Include="ViewModel\Page\CreateTicketPageViewModel.cs" />
@@ -193,7 +198,6 @@
     <Folder Include="Data\Context\" />
     <Folder Include="Data\Domain\" />
     <Folder Include="Model\App\" />
-    <Folder Include="Model\Base\" />
     <Folder Include="ViewModel\App\" />
     <Folder Include="ViewModel\Data\" />
     <Folder Include="View\Domain\" />
