@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="SupportTicketSystem.View.ShowAllUsers"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SupportTicketSystem.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:SupportTicketSystem.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Page.DataContext>
+		<viewModel:UserPageViewModel/>
+	</Page.DataContext>
+
+	<Page.Resources>
+		<Style x:Key="TextBlockDetailsStyle" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="24"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Margin" Value="10,10,10,10"/>
+
+
+		</Style>
+	</Page.Resources>
+	<Grid>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="2*"/>
+		</Grid.ColumnDefinitions>
+
+
+		<ListView Grid.Column="0" Grid.Row="0"
+		          ItemsSource="{Binding AllUsers}"
+		          SelectedItem="{Binding UserSelected, Mode=TwoWay}">
+		</ListView>
+
+		<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+			<TextBlock Text="Name:" Grid.Column="0" Grid.Row="0"/>
+			<TextBlock Text="{Binding UserSelected.Name}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="0" Grid.Row="1"/>
+			<TextBlock Text="ID:" Grid.Column="1" Grid.Row="0"/>
+			<TextBlock Text="{Binding UserSelected.UserId}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="1" Grid.Row="1"/>
+			<TextBlock Text="Email:" Grid.Column="2" Grid.Row="0"/>
+			<TextBlock Text="{Binding UserSelected.Email}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="2" Grid.Row="1"/>
+			<TextBlock Text="Company:" Grid.Column="3" Grid.Row="0"/>
+			<TextBlock Text="{Binding UserSelected.Company}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="3" Grid.Row="1"/>
+			<TextBlock Text="Role:" Grid.Column="4" Grid.Row="0"/>
+			<TextBlock Text="{Binding UserSelected.Role}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="4" Grid.Row="1"/>
+		</StackPanel>
+	</Grid>
+</Page>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
 using SupportTicketSystem.Command.App;
+using SupportTicketSystem.View;
 
 namespace SupportTicketSystem.ViewModel
 {
@@ -42,7 +43,7 @@ namespace SupportTicketSystem.ViewModel
         private static void AddCommands()
         {
             _navigationCommands.Add("OpenAllTicketView", CreateNavigationCommand(typeof(ShowAllTickets)));
-            _navigationCommands.Add("OpenAllTicketView2", CreateNavigationCommand(typeof(ShowAllTickets)));
+            _navigationCommands.Add("OpenAllUserView", CreateNavigationCommand(typeof(ShowAllUsers)));
         }
 
         private static NavigationCommand CreateNavigationCommand(Type viewType)

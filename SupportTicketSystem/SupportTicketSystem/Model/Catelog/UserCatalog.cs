@@ -1,27 +1,24 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Collections.Generic;
 using System.Linq;
-
-
 
 namespace SupportTicketSystem.Model.Catelog
 {
-    public class UserCatalog
-    {
-        public partial class MainPage
-        {
-            SqlConnection sqlc = new SqlConnection();
-            sqlc.ConnectionString = "";
+	public class UserCatalog
+	{
+		private SupportticketdbContext _dbContext;
 
-            SqlCommand sqlm =
-                new SqlCommand("select count (*) as cnt from login_database where username=@usr and password=@pwd",
-                    sqlc);
+		public UserCatalog()
+		{
+			_dbContext = new SupportticketdbContext();
+		}
 
-            sqlm.Parameters.Clear();
-            sqlm.Parameters.AddWithValue("@usr", txt_Username.Text);
-            sqlm.Parameters.AddWithValue("@pwd", txt_Password.Text);
-            sqlc.Open();
-
-        }
-    }
+		public List<User> ShowAll
+		{
+			get
+			{
+				List<User> AllUsers = _dbContext.Users.ToList();
+				return AllUsers;
+			}
+		}
+	}
 }

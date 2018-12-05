@@ -129,6 +129,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Catelog\UserCatalog.cs" />
     <Compile Include="Model\TicketCatalog.cs" />
     <Compile Include="Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,6 +142,10 @@
     <Compile Include="User.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\TicketPageViewModel.cs" />
+    <Compile Include="ViewModel\UserPageViewModel.cs" />
+    <Compile Include="View\ShowAllUsers.xaml.cs">
+      <DependentUpon>ShowAllUsers.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -172,6 +177,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ShowAllUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TicketView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,7 +199,6 @@
     <Folder Include="Data\Domain\" />
     <Folder Include="Model\App\" />
     <Folder Include="Model\Base\" />
-    <Folder Include="Model\Catelog\" />
     <Folder Include="ViewModel\App\" />
     <Folder Include="ViewModel\Base\" />
     <Folder Include="ViewModel\Data\" />
