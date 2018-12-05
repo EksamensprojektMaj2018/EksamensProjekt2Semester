@@ -16,7 +16,8 @@
     <NavigationView SelectedItem ="{Binding SelectedItem, Mode=TwoWay}">
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Show all tickets" Tag="OpenAllTicketView"/>
-            <NavigationViewItem Content="Show all Users" Tag="OpenAllUserView"/>
+	        <NavigationViewItem Content="Create a Ticket" Tag="OpenCreateTicket"/>
+			<NavigationViewItem Content="Show all Users" Tag="OpenAllUserView"/>
         </NavigationView.MenuItems>
         <Frame x:Name="AppFrame"/>
     </NavigationView>
