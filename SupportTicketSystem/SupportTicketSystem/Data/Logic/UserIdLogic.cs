@@ -1,5 +1,4 @@
-﻿using System;
-using SupportTicketSystem.Data.Base;
+﻿using SupportTicketSystem.Data.Base;
 
 namespace SupportTicketSystem
 {

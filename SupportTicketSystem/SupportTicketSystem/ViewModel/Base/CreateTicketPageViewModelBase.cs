@@ -10,11 +10,11 @@ namespace SupportTicketSystem.ViewModel.Base
         private TicketCatalog _ticketCatalog;
         private Ticket _newTicket;
 
-        public CreateTicketPageViewModel()
-        {
-            _ticketCatalog = new TicketCatalog();
-            _newTicket = new Ticket();
-        }
+        //public CreateTicketPageViewModel()
+        //{
+        //    _ticketCatalog = new TicketCatalog();
+        //    _newTicket = new Ticket();
+        //}
 
         public string Message
         {
