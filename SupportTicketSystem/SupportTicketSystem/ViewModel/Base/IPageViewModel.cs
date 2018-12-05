@@ -10,6 +10,6 @@ namespace SupportTicketSystem.ViewModel.Base
 
         TDataViewModel ItemDetails { get; set; }
 
-        void SetStatus(PageViewModelStatus newState);
+        void SetStatus(PageViewModelStatus newStatus);
     }
 }

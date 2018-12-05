@@ -141,6 +141,7 @@
     <Compile Include="SupportticketdbContext.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewModel\Base\DataViewModelBase.cs" />
     <Compile Include="ViewModel\Base\IDataViewModel.cs" />
     <Compile Include="ViewModel\Base\IPageViewModel.cs" />
     <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
