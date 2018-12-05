@@ -120,6 +120,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
+    <Compile Include="Command\App\NavigationCommand.cs" />
+    <Compile Include="Command\Base\CommandBase.cs" />
+    <Compile Include="Command\Base\INotifiableCommand.cs" />
     <Compile Include="Data\Base\DomainClassBase.cs" />
     <Compile Include="Data\Base\IDomainClass.cs" />
     <Compile Include="Data\Logic\TicketIdLogic.cs" />
@@ -130,9 +133,13 @@
     <Compile Include="Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
+    <Compile Include="ShowAllTickets.xaml.cs">
+      <DependentUpon>ShowAllTickets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SupportticketdbContext.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\TicketPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ShowAllTickets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TicketView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,8 +186,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Command\App\" />
-    <Folder Include="Command\Base\" />
     <Folder Include="Data\Context\" />
     <Folder Include="Data\Domain\" />
     <Folder Include="Model\App\" />
