@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SupportTicketSystem
+﻿namespace SupportTicketSystem
 {
     public partial class Ticket
     {
