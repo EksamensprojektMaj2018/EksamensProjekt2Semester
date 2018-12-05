@@ -42,7 +42,7 @@ namespace SupportTicketSystem.ViewModel
         private static void AddCommands()
         {
             _navigationCommands.Add("OpenAllTicketView", CreateNavigationCommand(typeof(ShowAllTickets)));
-            _navigationCommands.Add("OpenAllTicketView2", CreateNavigationCommand(typeof(ShowAllTickets)));
+            _navigationCommands.Add("OpenCreateTicket", CreateNavigationCommand(typeof(CreateTicket)));
         }
 
         private static NavigationCommand CreateNavigationCommand(Type viewType)
