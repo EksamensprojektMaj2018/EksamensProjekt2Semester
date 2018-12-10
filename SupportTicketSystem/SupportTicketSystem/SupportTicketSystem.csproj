@@ -119,10 +119,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\App\ClosedCommand.cs" />
+    <Compile Include="Command\App\CreateCommand.cs" />
+    <Compile Include="Command\App\SetViewStatusCommand.cs" />
+    <Compile Include="Command\App\UpdateCommand.cs" />
+    <Compile Include="Command\Base\CRUDCommandBase.cs" />
     <Compile Include="CreateTicket.xaml.cs">
       <DependentUpon>CreateTicket.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs" />
+    <Compile Include="Data\Domain\Category.cs" />
     <Compile Include="Command\App\NavigationCommand.cs" />
     <Compile Include="Command\Base\CommandBase.cs" />
     <Compile Include="Command\Base\INotifiableCommand.cs" />
@@ -132,22 +137,31 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\App\DomainModel.cs" />
+    <Compile Include="Model\Base\CatalogAppBase.cs" />
+    <Compile Include="Model\Base\CatalogEFBase.cs" />
+    <Compile Include="Model\Base\CatalogBase.cs" />
     <Compile Include="Model\Base\ICatalog.cs" />
-    <Compile Include="Model\Catelog\CreateTicketCatalog.cs" />
-    <Compile Include="Model\Catelog\UserCatalog.cs" />
-    <Compile Include="Model\TicketCatalog.cs" />
-    <Compile Include="Priority.cs" />
+    <Compile Include="Model\Catalog\CategoryCatalog.cs" />
+    <Compile Include="Model\Catalog\CreateTicketCatalog.cs" />
+    <Compile Include="Model\Catalog\PriorityCatalog.cs" />
+    <Compile Include="Model\Catalog\RoleCatalog.cs" />
+    <Compile Include="Model\Catalog\UserCatalog.cs" />
+    <Compile Include="Model\Catalog\TicketCatalog.cs" />
+    <Compile Include="Data\Domain\Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs" />
+    <Compile Include="Data\Domain\Role.cs" />
     <Compile Include="ShowAllTickets.xaml.cs">
       <DependentUpon>ShowAllTickets.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SupportticketdbContext.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Data\Context\SupportticketdbContext.cs" />
+    <Compile Include="Data\Domain\Ticket.cs" />
+    <Compile Include="Data\Domain\User.cs" />
+    <Compile Include="ViewModel\Base\DataViewModelAppBase.cs" />
     <Compile Include="ViewModel\Base\DataViewModelBase.cs" />
     <Compile Include="ViewModel\Base\IDataViewModel.cs" />
     <Compile Include="ViewModel\Base\IPageViewModel.cs" />
+    <Compile Include="ViewModel\Base\PageViewModelAppBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelStatus.cs" />
     <Compile Include="ViewModel\UserLoginPageViewModel.cs" />
@@ -212,13 +226,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Context\" />
-    <Folder Include="Data\Domain\" />
-    <Folder Include="Model\App\" />
     <Folder Include="ViewModel\App\" />
-    <Folder Include="ViewModel\Base\" />
     <Folder Include="ViewModel\Data\" />
-    <Folder Include="ViewModel\Page\" />
     <Folder Include="View\Domain\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

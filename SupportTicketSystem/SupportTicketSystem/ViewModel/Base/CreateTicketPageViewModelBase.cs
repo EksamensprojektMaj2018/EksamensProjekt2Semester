@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using SupportTicketSystem.Annotations;
 using SupportTicketSystem.Model;
 
 namespace SupportTicketSystem.ViewModel.Base

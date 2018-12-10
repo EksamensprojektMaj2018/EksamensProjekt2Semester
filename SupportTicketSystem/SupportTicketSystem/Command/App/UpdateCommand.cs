@@ -5,18 +5,20 @@ using SupportTicketSystem.ViewModel.Base;
 
 namespace SupportTicketSystem.Command.App
 {
-    public class CreateCommand<T, TDataViewModel> : CRUDCommandBase<T, TDataViewModel>
+    public class UpdateCommand<T, TDataViewModel> : CRUDCommandBase<T, TDataViewModel>
         where TDataViewModel : IDataViewModel<T>
         where T : IDomainClass
     {
-        public CreateCommand(ICatalog<T> catalog, IPageViewModel<TDataViewModel> pageViewModel)
+        public UpdateCommand(ICatalog<T> catalog, IPageViewModel<TDataViewModel> pageViewModel)
             : base(catalog, pageViewModel)
         {
         }
 
         protected override void Execute()
         {
-            _catalog.Create(_pageViewModel.ItemDetails.DataObject());
+            T obj = _pageViewModel.ItemDetails.DataObject();
+            _catalog.Delete(obj.GetId());
+            _catalog.Create(obj);
         }
     }
 }
