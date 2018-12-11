@@ -1,7 +1,6 @@
 ﻿using System;
 using SupportTicketSystem.Model.Base;
 using SupportTicketSystem.Model.Catalog;
-using SupportTicketSystem.Model.Catelog;
 
 
 namespace SupportTicketSystem.Model.App

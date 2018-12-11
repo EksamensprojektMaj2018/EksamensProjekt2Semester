@@ -6,6 +6,6 @@ namespace SupportTicketSystem.ViewModel.Base
     {
         T DataObject();
 
-        void SetDataObject();
+        void SetDataObject(T obj);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace SupportTicketSystem.Model.Catelog
+namespace SupportTicketSystem.Model.Catalog
 {
 	public class UserCatalog
 	{

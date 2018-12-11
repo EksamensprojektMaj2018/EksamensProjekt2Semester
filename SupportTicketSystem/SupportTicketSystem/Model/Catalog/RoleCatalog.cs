@@ -5,8 +5,6 @@ using SupportTicketSystem.Model.Base;
 
 namespace SupportTicketSystem.Model.Catalog
 {
-    public class RoleCatalog
-    {
         public class RoleCatalog : CatalogAppBase<Role>
         {
             public override List<Role> BuildObjects(DbSet<Role> objects)
@@ -14,5 +12,4 @@ namespace SupportTicketSystem.Model.Catalog
                 return objects.ToList();
             }
         }
-    }
 }

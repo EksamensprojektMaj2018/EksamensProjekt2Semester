@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using SupportTicketSystem.Model;
+using SupportTicketSystem.Model.Catalog;
 
 namespace SupportTicketSystem.ViewModel
 {
