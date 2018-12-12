@@ -11,5 +11,12 @@
         {
             TicketId = id;
         }
+
+        public Ticket()
+        {
+            Category = 1;
+            Priority = 1;
+            UserId = 2;
+        }
     }
 }

@@ -49,8 +49,8 @@ namespace SupportTicketSystem.Model.Base
         /// <param name="obj">Objekt som ønskes indsat i databasen</param>
         protected override void Insert(T obj)
         {
-            int id = All.Select(o => o.GetId()).Max() + 1;
-            obj.SetId(id);
+            //int id = All.Select(o => o.GetId()).Max() + 1;
+            //obj.SetId(id);
 
             _dbContext.Set<T>().Add(obj);
             _dbContext.SaveChanges();

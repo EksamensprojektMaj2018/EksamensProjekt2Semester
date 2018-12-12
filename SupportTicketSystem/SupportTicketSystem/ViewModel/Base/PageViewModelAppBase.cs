@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using SupportTicketSystem.Command.App;
 using SupportTicketSystem.Command.Base;
 using SupportTicketSystem.Data.Base;
@@ -78,6 +79,7 @@ namespace SupportTicketSystem.ViewModel.Base
 
         public override void SetStatus(PageViewModelStatus open)
         {
+            SetState(open);
         }
 
         /// <summary>
@@ -117,9 +119,18 @@ namespace SupportTicketSystem.ViewModel.Base
         /// <summary>
         /// Returnerer de Commands, som hører til viewet i dets nuværende tilstand.
         /// </summary>
-        private Dictionary<string, CommandBase> CurrentCommands
+        public Dictionary<string, CommandBase> CurrentCommands
         {
             get { return _allCommands[_status]; }
+        }
+        public List<CommandBase> CurrentCommandsObj
+        {
+            get { return CurrentCommands.Values.ToList(); }
+        }
+
+        public ICommand CreateCommandObj
+        {
+            get { return new CreateCommand<T, TDataViewModel>(_catalog, this); }
         }
 
         /// <summary>

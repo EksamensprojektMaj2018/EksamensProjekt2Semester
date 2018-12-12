@@ -1,18 +1,17 @@
-﻿using SupportTicketSystem.Model.Catalog;
+﻿using System.Collections.Generic;
+using SupportTicketSystem.Model.App;
+using SupportTicketSystem.Model.Catalog;
 using SupportTicketSystem.ViewModel.Base;
 
 namespace SupportTicketSystem.ViewModel.Data
 {
     public class TicketDataViewModel : DataViewModelAppBase<Ticket>
     {
-        private TicketCatalog _ticketCatalog;
-        private Ticket _newTicket;
-
+        public List<Priority> _priorityList;
+        public Priority _prioritySelected;
         public TicketDataViewModel()
         {
-            //_ticketCatalog = new TicketCatalog();
-            //_newTicket = new Ticket();
-            //_ticketCatalog = DataObject().Category == null ? null 
+            _priorityList = DomainModel.GetCatalog<Priority>().All;
         }
 
         public string Topic
@@ -26,10 +25,10 @@ namespace SupportTicketSystem.ViewModel.Data
         }
         public string Message
         {
-            get { return _newTicket.Message; }
+            get { return DataObject().Message; }
             set
             {
-                _newTicket.Message = value;
+                DataObject().Message = value;
                 OnPropertyChanged();
             }
         }
@@ -40,6 +39,21 @@ namespace SupportTicketSystem.ViewModel.Data
             set
             {
                 DataObject().Category = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<Priority> PriorityList
+        {
+            get { return _priorityList; }
+        }
+        public Priority PrioritySelected
+        {
+            get { return _prioritySelected; }
+            set
+            {
+                _prioritySelected = value;
+                DataObject().Priority = _prioritySelected.PriorityId;
                 OnPropertyChanged();
             }
         }

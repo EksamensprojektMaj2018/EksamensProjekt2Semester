@@ -35,7 +35,7 @@ namespace SupportTicketSystem.ViewModel.Base
             set
             {
                 // I Create-tilstand skal Details sættes til et nyt "tomt" objekt.
-                if (_status == PageViewModelStatus.Open)
+                if (_status == PageViewModelStatus.Create)
                 {
                     _itemSelected = null;
                     _itemDetails = CreateDataViewModel(new T());

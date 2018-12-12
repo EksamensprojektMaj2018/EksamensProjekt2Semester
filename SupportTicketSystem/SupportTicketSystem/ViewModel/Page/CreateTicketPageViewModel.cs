@@ -5,11 +5,9 @@ namespace SupportTicketSystem.ViewModel.Page
 {
     public class CreateTicketPageViewModel : PageViewModelAppBase<Ticket, TicketDataViewModel>
     {
-        private Ticket _createTicket;
-
         public CreateTicketPageViewModel()
         {
-
+            SetState(PageViewModelStatus.Create);
         }
     }
 }

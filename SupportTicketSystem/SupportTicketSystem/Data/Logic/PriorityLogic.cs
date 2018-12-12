@@ -11,5 +11,10 @@
         {
             PriorityId = id;
         }
+
+        public override string ToString()
+        {
+            return PriorityName;
+        }
     }
 }
