@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 using SupportTicketSystem.Model;
 
 namespace SupportTicketSystem.Command
@@ -7,10 +7,11 @@ namespace SupportTicketSystem.Command
     // Her bruges interfacet fra Pers SimpleRPGFromScratch
     public abstract class CommandBase : INotifiableCommand
     {
+        private Frame rootFrame;
         private UserLoginPageViewModel _pvm;
         private UserLoginCatalog _catalog;
 
-        protected CommandBase(UserLoginPageViewModel pvm, UserLoginCatalog catalog)
+        protected CommandBase(UserLoginPageViewModel pvm, UserLoginCatalog catalog, Frame rootFrame)
         {
             _pvm = pvm;
             _catalog = catalog;
@@ -18,14 +19,12 @@ namespace SupportTicketSystem.Command
 
         public bool CanExecute(object parameter)
         {
-            return CanExecute();
+            return _catalog.OkUser(_pvm.UserName, _pvm.Password);
         }
 
         public void Execute(object parameter)
         {
-            Execute();
-            // User u = _pvm.NewUser;
-            // _catalog.Create(u);
+            rootFrame.Navigate(typeof(MainPage), null);
         }
 
         protected virtual bool CanExecute()

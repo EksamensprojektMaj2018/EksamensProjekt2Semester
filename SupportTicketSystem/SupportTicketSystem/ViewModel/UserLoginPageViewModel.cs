@@ -1,31 +1,32 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using SupportTicketSystem.Annotations;
-using SupportTicketSystem.Command;
+using Windows.UI.Xaml.Controls;
 using SupportTicketSystem.Model;
 
 namespace SupportTicketSystem
 {
     public class UserLoginPageViewModel : INotifyPropertyChanged
     {
-        private UserLoginCatalog _catalog;
+        public static Frame TheRootFrame;
+
+        private UserLoginCatalog _userCatalog;
         private string _user;
         private string _password;
-        private ICommand _createCommand;
+        private LoginCommand _loginCommand;
 
-
-        public UserLoginPageViewModel(string password)
-        {
-            Password = password;
-            _catalog = new UserLoginCatalog();
-            //_createCommand = new CreateCommandBase<User>(_catalog, newUser);
-        }
 
         public UserLoginPageViewModel()
         {
-            throw new System.NotImplementedException();
+            _password = "";
+            _user = "";
+            _userCatalog = new UserLoginCatalog();
+            _loginCommand = new LoginCommand(TheRootFrame, _userCatalog, this);
+
+            
         }
+
+       
 
 
         public string UserName
@@ -33,8 +34,9 @@ namespace SupportTicketSystem
             get { return _user; }
             set
             {
-                UserName = value;
+                _user = value;
                 OnPropertyChanged();
+                _loginCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -45,22 +47,19 @@ namespace SupportTicketSystem
             {
                 _password = value;
                 OnPropertyChanged();
+                _loginCommand.RaiseCanExecuteChanged();
             }
         }
 
-        //public void isEnabled
-        //{
 
-        //}
+        
 
-        public ICommand CreateComandObj
+        public ICommand LoginCommandObj
         {
-            get { return _createCommand; }
+            get { return _loginCommand; }
         }
         public event PropertyChangedEventHandler PropertyChanged;
         
-
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

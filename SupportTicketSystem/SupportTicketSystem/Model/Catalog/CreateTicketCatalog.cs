@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace SupportTicketSystem.Model.Catelog
+﻿namespace SupportTicketSystem.Model.Catelog
 {
     public class CreateTicketCatalog
     {
