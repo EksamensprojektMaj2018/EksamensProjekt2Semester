@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SupportTicketSystem
 {
@@ -18,8 +19,8 @@ namespace SupportTicketSystem
 
         public User(string name, string password)
         {
-            Name = name;
-            Password = password;
+            name = Name;
+            password = Password;
         }
 
         public Role RoleNavigation { get; set; }

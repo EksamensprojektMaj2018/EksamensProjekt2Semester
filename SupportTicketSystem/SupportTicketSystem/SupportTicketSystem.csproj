@@ -134,6 +134,7 @@
     <Compile Include="Data\Base\DomainClassBase.cs" />
     <Compile Include="Data\Base\IDomainClass.cs" />
     <Compile Include="Data\Logic\TicketIdLogic.cs" />
+    <Compile Include="Data\Logic\UserIdLogic.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -210,6 +211,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ShowAllUsers.xaml">
+    <Page Include="View\UserLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,7 +229,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\Domain\" />
+    <Folder Include="Command\Base\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Domain\" />
+    <Folder Include="Model\App\" />
+    <Folder Include="Model\Base\" />
+    <Folder Include="ViewModel\App\" />
+    <Folder Include="ViewModel\Data\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
