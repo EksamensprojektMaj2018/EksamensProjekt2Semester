@@ -6,11 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:SupportTicketSystem.ViewModel"
+    xmlns:page="using:SupportTicketSystem.ViewModel.Page"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Page.DataContext>
-        <viewModel:TicketPageViewModel/>
+        <page:TicketPageViewModel/>
     </Page.DataContext>
     <Grid>
         <ListView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding AllTickets}"/>
