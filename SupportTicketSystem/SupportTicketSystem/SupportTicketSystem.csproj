@@ -210,7 +210,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ShowAllUsers.xaml">
+    <Page Include="View\ShowAllUsers.xaml"/>
     <Page Include="View\UserLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
