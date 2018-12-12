@@ -15,13 +15,11 @@
     </Page.DataContext>
 
     <Page.Resources>
-        <Style x:Key="TextBlockDetailsStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="10,10,10,10"/>
-
-
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/App/AppResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid>
 
@@ -34,13 +32,19 @@
         <ListView Grid.Column="0" Grid.Row="0"
                   ItemsSource="{Binding AllTickets}"
                   SelectedItem="{Binding TicketSelected, Mode=TwoWay}">
+            
         </ListView>
-
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
-            <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Priority}" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Category}" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="Emne:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Prioritet:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Priority}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Kategori:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Category}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Besked:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle2}"/>
         </StackPanel>
+
+
     </Grid>
 </Page>

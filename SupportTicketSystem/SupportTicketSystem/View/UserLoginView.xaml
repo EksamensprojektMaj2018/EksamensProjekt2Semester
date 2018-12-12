@@ -13,7 +13,8 @@
     </Page.DataContext>
 
     <Grid>
-        <StackPanel>
+        
+        <StackPanel HorizontalAlignment="Center" Width="500">
             <TextBlock>Username:</TextBlock>
             <TextBox Text="{Binding UserName, Mode = TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="UsernameTextBox" PlaceholderText="(enter new username)"/>
 

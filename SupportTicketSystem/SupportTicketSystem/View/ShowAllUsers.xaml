@@ -11,17 +11,16 @@
 
 	<Page.DataContext>
 		<viewModel:UserPageViewModel/>
+
 	</Page.DataContext>
 
-	<Page.Resources>
-		<Style x:Key="TextBlockDetailsStyle" TargetType="TextBlock">
-			<Setter Property="FontSize" Value="24"/>
-			<Setter Property="FontWeight" Value="Bold"/>
-			<Setter Property="Margin" Value="10,10,10,10"/>
-
-
-		</Style>
-	</Page.Resources>
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="App/AppResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
 	<Grid>
 
 		<Grid.ColumnDefinitions>
@@ -36,16 +35,16 @@
 		</ListView>
 
 		<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
-			<TextBlock Text="Name:" Grid.Column="0" Grid.Row="0"/>
-			<TextBlock Text="{Binding UserSelected.Name}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="0" Grid.Row="1"/>
-			<TextBlock Text="ID:" Grid.Column="1" Grid.Row="0"/>
-			<TextBlock Text="{Binding UserSelected.UserId}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="1" Grid.Row="1"/>
-			<TextBlock Text="Email:" Grid.Column="2" Grid.Row="0"/>
-			<TextBlock Text="{Binding UserSelected.Email}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="2" Grid.Row="1"/>
-			<TextBlock Text="Company:" Grid.Column="3" Grid.Row="0"/>
-			<TextBlock Text="{Binding UserSelected.Company}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="3" Grid.Row="1"/>
-			<TextBlock Text="Role:" Grid.Column="4" Grid.Row="0"/>
-			<TextBlock Text="{Binding UserSelected.Role}" Style="{StaticResource TextBlockDetailsStyle}" Grid.Column="4" Grid.Row="1"/>
+            <TextBlock Text="Name:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding UserSelected.Name}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="ID:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding UserSelected.UserId}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Email:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding UserSelected.Email}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Company:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding UserSelected.Company}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="Role:" Style="{StaticResource TextBlockDetailsStyle}"/>
+            <TextBlock Text="{Binding UserSelected.Role}" Style="{StaticResource TextBlockDetailsStyle2}"/>
 		</StackPanel>
 	</Grid>
 </Page>
