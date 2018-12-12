@@ -9,7 +9,24 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox Text="Overskrift"/>
-        <TextBox Text="Beskrivelse" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+          
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+            <TextBlock Text="Overskrift:"></TextBlock>
+            <TextBox Text="Overskrift"/>
+            <TextBlock Text="Beskrivelse:" Margin="0, 10, 10, 10"></TextBlock>
+            <TextBox Text="Beskrivelse" />
+            <TextBlock Text="Category:" Margin="0, 10, 10, 10"></TextBlock>
+            <ComboBox Margin="0, 10, 10, 10"></ComboBox>
+            <TextBlock Text="Priority:"></TextBlock>
+            <ComboBox Margin="0, 10, 10, 10"></ComboBox>
+            <Button Content="Submit Ticket" Margin="0, 10, 10, 10"></Button>
+        </StackPanel>
     </Grid>
 </Page>
