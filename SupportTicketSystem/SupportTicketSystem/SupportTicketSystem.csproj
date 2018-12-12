@@ -171,12 +171,12 @@
     <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelStatus.cs" />
     <Compile Include="ViewModel\Data\TicketDataViewModel.cs" />
-    <Compile Include="ViewModel\UserLoginPageViewModel.cs" />
+    <Compile Include="ViewModel\Page\UserLoginPageViewModel.cs" />
     <Compile Include="ViewModel\Base\CreateTicketPageViewModelBase.cs" />
     <Compile Include="ViewModel\Page\CreateTicketPageViewModel.cs" />
     <Compile Include="ViewModel\App\MainPageViewModel.cs" />
-    <Compile Include="ViewModel\TicketPageViewModel.cs" />
-    <Compile Include="ViewModel\UserPageViewModel.cs" />
+    <Compile Include="ViewModel\Page\TicketPageViewModel.cs" />
+    <Compile Include="ViewModel\Page\UserPageViewModel.cs" />
     <Compile Include="View\ShowAllUsers.xaml.cs">
       <DependentUpon>ShowAllUsers.xaml</DependentUpon>
     </Compile>

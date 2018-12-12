@@ -2,10 +2,12 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using SupportTicketSystem.Model.Catalog;
+using SupportTicketSystem.ViewModel.Base;
+using SupportTicketSystem.ViewModel.Data;
 
-namespace SupportTicketSystem.ViewModel
+namespace SupportTicketSystem.ViewModel.Page
 {
-    public class TicketPageViewModel : INotifyPropertyChanged
+    public class TicketPageViewModel : PageViewModelAppBase<Ticket, TicketDataViewModel>
     {
         private TicketCatalog _ticketCatalog;
         private Ticket _ticketSelected;
@@ -27,12 +29,6 @@ namespace SupportTicketSystem.ViewModel
                 _ticketSelected = value;
                 OnPropertyChanged();
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
