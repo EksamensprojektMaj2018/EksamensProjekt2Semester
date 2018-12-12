@@ -15,7 +15,7 @@ namespace SupportTicketSystem.ViewModel.Base
             protected event Action<PageViewModelStatus> _viewStatusChanged;
 
             private TDataViewModel _itemSelected;
-            protected TDataViewModel _itemDetails;
+            private TDataViewModel _itemDetails;
 
 
         protected PageViewModelBase()

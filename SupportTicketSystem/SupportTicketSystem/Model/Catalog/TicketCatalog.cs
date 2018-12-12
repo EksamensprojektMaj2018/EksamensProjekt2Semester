@@ -1,25 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using SupportTicketSystem.Model.Base;
 
 namespace SupportTicketSystem.Model.Catalog
 {
-    public class TicketCatalog
+    public class TicketCatalog : CatalogAppBase<Ticket>
     {
-        private SupportticketdbContext _dbContext;
-
-        public TicketCatalog()
+        public override List<Ticket> BuildObjects(DbSet<Ticket> objects)
         {
-            _dbContext = new SupportticketdbContext();
+            return objects.ToList();
         }
-
-        public List<Ticket> ShowAll
-        {
-            get
-            {
-                List<Ticket> AllTickets = _dbContext.Tickets.ToList();
-                return AllTickets;
-            }
-        }
-        
     }
 }

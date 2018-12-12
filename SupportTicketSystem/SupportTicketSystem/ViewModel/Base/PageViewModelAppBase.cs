@@ -3,6 +3,7 @@ using System.Linq;
 using SupportTicketSystem.Command.App;
 using SupportTicketSystem.Command.Base;
 using SupportTicketSystem.Data.Base;
+using SupportTicketSystem.Model.App;
 using SupportTicketSystem.Model.Base;
 
 namespace SupportTicketSystem.ViewModel.Base

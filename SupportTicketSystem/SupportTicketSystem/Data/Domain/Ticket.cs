@@ -1,6 +1,8 @@
-﻿namespace SupportTicketSystem
+﻿using SupportTicketSystem.Data.Base;
+
+namespace SupportTicketSystem
 {
-    public partial class Ticket
+    public partial class Ticket : DomainClassBase
     {
         public int TicketId { get; set; }
         public string Message { get; set; }

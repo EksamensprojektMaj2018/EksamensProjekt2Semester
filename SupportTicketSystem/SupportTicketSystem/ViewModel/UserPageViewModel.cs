@@ -17,7 +17,7 @@ namespace SupportTicketSystem.ViewModel
 		}
 		public List<User> AllUsers
 		{
-			get { return _userCatalog.ShowAll; }
+			get { return _userCatalog.All; }
 		}
 		public User UserSelected
 		{

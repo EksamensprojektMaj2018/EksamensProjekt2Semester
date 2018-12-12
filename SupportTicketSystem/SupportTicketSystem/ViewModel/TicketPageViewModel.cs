@@ -17,7 +17,7 @@ namespace SupportTicketSystem.ViewModel
         }
         public List<Ticket> AllTickets
         {
-            get { return _ticketCatalog.ShowAll; }
+            get { return _ticketCatalog.All; }
         }
         public Ticket TicketSelected
         {

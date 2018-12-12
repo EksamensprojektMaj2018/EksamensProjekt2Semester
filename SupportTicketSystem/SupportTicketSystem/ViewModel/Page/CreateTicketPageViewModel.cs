@@ -3,7 +3,7 @@ using SupportTicketSystem.ViewModel.Data;
 
 namespace SupportTicketSystem.ViewModel.Page
 {
-    public class CreateTicketPageViewModel : PageViewModelAppBase<CreateTicket, CreateTicketDataViewModel>
+    public class CreateTicketPageViewModel : PageViewModelAppBase<Ticket, TicketDataViewModel>
     {
     }
 }

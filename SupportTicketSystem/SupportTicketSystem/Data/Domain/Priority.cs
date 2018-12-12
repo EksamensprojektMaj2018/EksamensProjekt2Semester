@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using SupportTicketSystem.Data.Base;
 
 namespace SupportTicketSystem
 {
-    public partial class Priority
+    public partial class Priority : DomainClassBase
     {
         public Priority()
         {

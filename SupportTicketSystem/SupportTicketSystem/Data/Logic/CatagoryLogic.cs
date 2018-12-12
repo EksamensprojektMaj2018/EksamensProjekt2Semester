@@ -1,16 +1,18 @@
-﻿using SupportTicketSystem.Data.Base;
+﻿using System;
+using SupportTicketSystem.Data.Base;
+
 namespace SupportTicketSystem
 {
-    public partial class Ticket : DomainClassBase
+    public partial class Category
     {
         public override int GetId()
         {
-            return TicketId;
+            return CategoryId;
         }
 
         public override void SetId(int id)
         {
-            TicketId = id;
+            CategoryId = id;
         }
     }
 }

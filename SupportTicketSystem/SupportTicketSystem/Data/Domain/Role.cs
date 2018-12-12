@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using SupportTicketSystem.Data.Base;
 
 namespace SupportTicketSystem
 {
-    public partial class Role
+    public partial class Role : DomainClassBase
     {
         public Role()
         {

@@ -13,17 +13,17 @@ namespace SupportTicketSystem.Model.App
         private ICatalog<Category> Categorys { get; }
         private ICatalog<Priority> Prioritys { get; }
         private ICatalog<Role> Roles { get; }
-        private ICatalog<Ticket> Ticketss { get; }
+        private ICatalog<Ticket> Tickets { get; }
         private ICatalog<User> Users { get; }
 
 
         private DomainModel()
         {
             Categorys = new CategoryCatalog();
-            Categorys = new PriorityCatalog();
-            Categorys = new RoleCatalog();
-            Categorys = new TicketCatalog();
-            Categorys = new UserCatalog();
+            Prioritys = new PriorityCatalog();
+            Roles = new RoleCatalog();
+            Tickets = new TicketCatalog();
+            Users = new UserCatalog();
         }
 
         public static ICatalog<T> GetCatalog<T>()
@@ -45,7 +45,7 @@ namespace SupportTicketSystem.Model.App
 
             if (typeof(T) == typeof(Ticket))
             {
-                return (ICatalog<T>)Instance.Ticketss;
+                return (ICatalog<T>)Instance.Tickets;
             }
 
             if (typeof(T) == typeof(User))

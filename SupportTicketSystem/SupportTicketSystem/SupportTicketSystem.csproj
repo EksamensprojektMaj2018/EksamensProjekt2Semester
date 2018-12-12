@@ -133,7 +133,11 @@
     <Compile Include="Command\Base\INotifiableCommand.cs" />
     <Compile Include="Data\Base\DomainClassBase.cs" />
     <Compile Include="Data\Base\IDomainClass.cs" />
-    <Compile Include="Data\Logic\TicketIdLogic.cs" />
+    <Compile Include="Data\Logic\CatagoryLogic.cs" />
+    <Compile Include="Data\Logic\PriorityLogic.cs" />
+    <Compile Include="Data\Logic\RoleLogic.cs" />
+    <Compile Include="Data\Logic\TicketLogic.cs" />
+    <Compile Include="Data\Logic\UserLogic.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -164,7 +168,7 @@
     <Compile Include="ViewModel\Base\PageViewModelAppBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelStatus.cs" />
-    <Compile Include="ViewModel\Data\CreateTicketDataViewModel.cs" />
+    <Compile Include="ViewModel\Data\TicketDataViewModel.cs" />
     <Compile Include="ViewModel\UserLoginPageViewModel.cs" />
     <Compile Include="ViewModel\Base\CreateTicketPageViewModelBase.cs" />
     <Compile Include="ViewModel\Page\CreateTicketPageViewModel.cs" />
