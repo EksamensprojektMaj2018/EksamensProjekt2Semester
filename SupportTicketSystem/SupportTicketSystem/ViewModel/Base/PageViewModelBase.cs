@@ -20,7 +20,7 @@ namespace SupportTicketSystem.ViewModel.Base
 
         protected PageViewModelBase()
         {
-            _catalog.GetCatalog();
+            _catalog = GetCatalog();
             _catalog.CatalogChanged += OnCatalogHasChanged;
         }
 
@@ -60,7 +60,28 @@ namespace SupportTicketSystem.ViewModel.Base
                 get { return _itemDetails; }
             }
 
-            private TDataViewModel CreateDataViewModel(T obj)
+            public abstract void SetStatus(PageViewModelStatus newStatus);
+
+            public bool EnabledStateCollection
+            {
+                get { return _status != PageViewModelStatus.Create; }
+            }
+            public bool EnabledStateDetails
+            {
+                get { return _status != PageViewModelStatus.Closed; }
+            }
+        public void SetState(PageViewModelStatus newStatus)
+            {
+                _status = newStatus;
+                ItemSelected = null;
+
+                OnPropertyChanged(nameof(EnabledStateDetails));
+                OnPropertyChanged(nameof(EnabledStateCollection));
+
+                // Orientér andre interessenter om ændringen.
+                OnViewStateChanged(newStatus);
+            }
+        private TDataViewModel CreateDataViewModel(T obj)
             {
                 TDataViewModel dvmObj = new TDataViewModel();
                 dvmObj.SetDataObject(obj);

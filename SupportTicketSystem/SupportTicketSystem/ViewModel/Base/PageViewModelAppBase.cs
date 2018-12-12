@@ -8,7 +8,7 @@ using SupportTicketSystem.Model.Base;
 
 namespace SupportTicketSystem.ViewModel.Base
 {
-    public class PageViewModelAppBase<T, TDataViewModel> : PageViewModelBase<T, TDataViewModel>
+    public abstract class PageViewModelAppBase<T, TDataViewModel> : PageViewModelBase<T, TDataViewModel>
         where T : IDomainClass, new()
         where TDataViewModel : class, IDataViewModel<T>, new()
     {
@@ -74,6 +74,10 @@ namespace SupportTicketSystem.ViewModel.Base
 
             // Start viewet i read/Delete-tilstanden.
             SetStatus(PageViewModelStatus.Open);
+        }
+
+        public override void SetStatus(PageViewModelStatus open)
+        {
         }
 
         /// <summary>

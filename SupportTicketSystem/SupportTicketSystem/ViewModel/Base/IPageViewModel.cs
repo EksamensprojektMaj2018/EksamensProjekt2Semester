@@ -8,7 +8,7 @@ namespace SupportTicketSystem.ViewModel.Base
 
         TDataViewModel ItemSelected { get; set; }
 
-        TDataViewModel ItemDetails { get; set; }
+        TDataViewModel ItemDetails { get; }
 
         void SetStatus(PageViewModelStatus newStatus);
     }
