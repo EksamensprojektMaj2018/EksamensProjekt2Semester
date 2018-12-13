@@ -11,17 +11,23 @@
     <Page.DataContext>
         <local:UserLoginPageViewModel/>
     </Page.DataContext>
-
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="App/AppResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <Grid>
         
-        <StackPanel HorizontalAlignment="Center" Width="500">
-            <TextBlock>Username:</TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
+            <TextBlock Style="{StaticResource TextBlockDetailsStyle2}" Text="Username:"/>
             <TextBox Text="{Binding UserName, Mode = TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="UsernameTextBox" PlaceholderText="(enter new username)"/>
 
-            <TextBlock>Password:</TextBlock>
+            <TextBlock Style="{StaticResource TextBlockDetailsStyle2}" Text="Password:"/>
             <TextBox Text="{Binding Password, Mode = TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="PasswordTextBox" PlaceholderText="(enter new password)"/>
 
-            <Button Content="Login" Command="{Binding LoginCommandObj}"/>
+            <Button Content="Login" Style="{StaticResource ButtonStyle}" Command="{Binding LoginCommandObj}"/>
         </StackPanel>
     </Grid>
 </Page>

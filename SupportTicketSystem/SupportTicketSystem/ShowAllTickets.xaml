@@ -34,7 +34,7 @@
                   SelectedItem="{Binding TicketSelected, Mode=TwoWay}">
             
         </ListView>
-        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="10, 0, 0, 0">
             <TextBlock Text="Emne:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Prioritet:" Style="{StaticResource TextBlockDetailsStyle}"/>
