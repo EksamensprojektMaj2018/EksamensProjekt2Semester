@@ -170,6 +170,7 @@
     <Compile Include="ViewModel\Base\PageViewModelAppBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelBase.cs" />
     <Compile Include="ViewModel\Base\PageViewModelStatus.cs" />
+    <Compile Include="ViewModel\Data\LoginDataViewModel.cs" />
     <Compile Include="ViewModel\Data\TicketDataViewModel.cs" />
     <Compile Include="ViewModel\Page\UserLoginPageViewModel.cs" />
     <Compile Include="ViewModel\Base\CreateTicketPageViewModelBase.cs" />
@@ -192,6 +193,7 @@
     <None Include="SupportTicketSystem_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\tomcruise.gif" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

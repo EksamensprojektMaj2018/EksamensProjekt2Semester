@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using SupportTicketSystem.Model.App;
-using SupportTicketSystem.Model.Catalog;
 using SupportTicketSystem.ViewModel.Base;
 
 namespace SupportTicketSystem.ViewModel.Data
