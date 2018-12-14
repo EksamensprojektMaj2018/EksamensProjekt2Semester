@@ -1,4 +1,6 @@
-﻿namespace SupportTicketSystem
+﻿using SupportTicketSystem.Model.App;
+
+namespace SupportTicketSystem
 {
     public partial class Ticket
     {
@@ -17,6 +19,15 @@
             Category = 1;
             Priority = 1;
             UserId = 2;
+        }
+
+        public string PriorityText
+        {
+            get { return DomainModel.GetCatalog<Priority>().Read(Priority).PriorityName; }
+        }
+        public string CategoryText
+        {
+            get { return DomainModel.GetCatalog<Category>().Read(Category).Category1; }
         }
     }
 }

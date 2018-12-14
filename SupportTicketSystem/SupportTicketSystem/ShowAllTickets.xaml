@@ -38,9 +38,9 @@
             <TextBlock Text="Emne:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Prioritet:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Priority}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding TicketSelected.PriorityText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Kategori:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Category}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding TicketSelected.CategoryText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Besked:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle2}"/>
         </StackPanel>
