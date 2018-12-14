@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using SupportTicketSystem.Model;
+using SupportTicketSystem.Model.App;
+using SupportTicketSystem.Model.Catalog;
 
 namespace SupportTicketSystem
 {
@@ -10,7 +12,7 @@ namespace SupportTicketSystem
     {
         public static Frame TheRootFrame;
 
-        private UserLoginCatalog _userCatalog;
+        private UserCatalog _userCatalog;
         private string _user;
         private string _password;
         private LoginCommand _loginCommand;
@@ -20,7 +22,8 @@ namespace SupportTicketSystem
         {
             _password = "";
             _user = "";
-            _userCatalog = new UserLoginCatalog();
+            _userCatalog = (UserCatalog) DomainModel.GetCatalog<User>();
+            var test = DomainModel.GetCatalog<User>();
             _loginCommand = new LoginCommand(TheRootFrame, _userCatalog, this);
 
             

@@ -8,9 +8,12 @@ namespace SupportTicketSystem.ViewModel.Data
     {
         public List<Priority> _priorityList;
         public Priority _prioritySelected;
+        public List<Category> _categoryList;
+        public Category _categorySelected;
         public TicketDataViewModel()
         {
             _priorityList = DomainModel.GetCatalog<Priority>().All;
+            _categoryList = DomainModel.GetCatalog<Category>().All;
         }
 
         public string Topic
@@ -31,13 +34,17 @@ namespace SupportTicketSystem.ViewModel.Data
                 OnPropertyChanged();
             }
         }
-
-        public int Catagory
+        public List<Category> CategoryList
         {
-            get { return DataObject().Category; }
+            get { return _categoryList; }
+        }
+        public Category CategorySelected
+        {
+            get { return _categorySelected; }
             set
             {
-                DataObject().Category = value;
+                _categorySelected = value;
+                DataObject().Category = _categorySelected.CategoryId;
                 OnPropertyChanged();
             }
         }

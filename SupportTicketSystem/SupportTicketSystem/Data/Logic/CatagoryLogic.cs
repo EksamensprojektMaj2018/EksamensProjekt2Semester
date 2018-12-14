@@ -14,5 +14,9 @@ namespace SupportTicketSystem
         {
             CategoryId = id;
         }
+        public override string ToString()
+        {
+            return CategoryName;
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace SupportTicketSystem
             {
                 entity.ToTable("Category");
 
-                entity.Property(e => e.Category1)
+                entity.Property(e => e.CategoryName)
                     .IsRequired()
                     .HasColumnName("Category")
                     .HasMaxLength(50);
