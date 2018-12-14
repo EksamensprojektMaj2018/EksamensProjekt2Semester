@@ -44,7 +44,7 @@
             <TextBlock Text="Company:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding UserSelected.Company}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Role:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.Role}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding UserSelected.RoleText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
 		</StackPanel>
 	</Grid>
 </Page>
