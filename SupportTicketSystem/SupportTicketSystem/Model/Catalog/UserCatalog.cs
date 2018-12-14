@@ -11,5 +11,14 @@ namespace SupportTicketSystem.Model.Catalog
 	    {
 	        return objects.ToList();
 	    }
+
+	    public bool OkUser(string name, string pwd)
+	    {
+	        List<User> matchingUsers = All.Where(u => u.Name == name && u.Password == pwd).ToList();
+
+	        return (matchingUsers.Count > 0);
+
+
+	    }
     }
 }

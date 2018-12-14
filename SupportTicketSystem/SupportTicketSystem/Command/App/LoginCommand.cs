@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using SupportTicketSystem.Model;
+using SupportTicketSystem.Model.Catalog;
 
 namespace SupportTicketSystem
 {
@@ -9,10 +10,10 @@ namespace SupportTicketSystem
     {
         private Frame _rootFrame;
         private UserLoginPageViewModel _pvm;
-        private UserLoginCatalog _userCatalog;
+        private UserCatalog _userCatalog;
 
 
-        public LoginCommand(Frame theRootFrame, UserLoginCatalog userCatalog, UserLoginPageViewModel userLoginPageViewModel)
+        public LoginCommand(Frame theRootFrame, UserCatalog userCatalog, UserLoginPageViewModel userLoginPageViewModel)
         {
             _rootFrame = theRootFrame;
             _userCatalog = userCatalog;

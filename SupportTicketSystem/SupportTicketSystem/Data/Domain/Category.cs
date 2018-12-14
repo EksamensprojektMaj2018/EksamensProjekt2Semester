@@ -11,7 +11,7 @@ namespace SupportTicketSystem
         }
 
         public int CategoryId { get; set; }
-        public string Category1 { get; set; }
+        public string CategoryName { get; set; }
 
         public ICollection<Ticket> Tickets { get; set; }
     }

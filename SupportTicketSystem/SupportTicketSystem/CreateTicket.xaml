@@ -31,9 +31,9 @@
             <TextBlock Style="{StaticResource TextBlockDetailsStyle2}" Text="Beskrivelse:"/>
             <TextBox Text="{Binding ItemDetails.Message, Mode=TwoWay}" />
             <TextBlock Text="Category:" Style="{StaticResource TextBlockDetailsStyle2}"/>
-            <ComboBox Style="{StaticResource ComboBoxStyle}"></ComboBox>
+            <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ItemDetails.CategoryList}" SelectedItem="{Binding ItemDetails.CategorySelected, Mode=TwoWay}"/>
             <TextBlock Text="Priority:" Style="{StaticResource TextBlockDetailsStyle2}"/>
-            <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ItemDetails.PriorityList}" SelectedItem="{Binding ItemDetails.PrioritySelected, Mode=TwoWay}"></ComboBox>
+            <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ItemDetails.PriorityList}" SelectedItem="{Binding ItemDetails.PrioritySelected, Mode=TwoWay}"/>
             <Button Content="Submit Ticket" Style="{StaticResource ButtonStyle}" Command="{Binding CreateCommandObj}"></Button>
         </StackPanel>
     </Grid>
