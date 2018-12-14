@@ -44,7 +44,5 @@
             <TextBlock Text="Besked:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle2}"/>
         </StackPanel>
-
-
     </Grid>
 </Page>
