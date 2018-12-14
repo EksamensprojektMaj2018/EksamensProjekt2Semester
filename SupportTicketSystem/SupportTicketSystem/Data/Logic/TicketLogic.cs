@@ -27,7 +27,7 @@ namespace SupportTicketSystem
         }
         public string CategoryText
         {
-            get { return DomainModel.GetCatalog<Category>().Read(Category).Category1; }
+            get { return DomainModel.GetCatalog<Category>().Read(Category).CategoryName; }
         }
     }
 }
