@@ -29,7 +29,7 @@
             <TextBlock Text="Overskrift:"/>
             <TextBox Text="{Binding ItemDetails.Topic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock Style="{StaticResource TextBlockDetailsStyle2}" Text="Beskrivelse:"/>
-            <TextBox Text="{Binding ItemDetails.Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding ItemDetails.Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Height="200"/>
             <TextBlock Text="Category:" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ItemDetails.CategoryList}" SelectedItem="{Binding ItemDetails.CategorySelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock Text="Priority:" Style="{StaticResource TextBlockDetailsStyle2}"/>
