@@ -7,5 +7,7 @@
         void SetId(int id);
 
         IDomainClass Copy();
+
+        bool IsValid { get; }
     }
 }

@@ -14,9 +14,14 @@
 
         public Ticket()
         {
-            Category = 1;
-            Priority = 1;
+            Category = 0;
+            Priority = 0;
             UserId = 2;
+        }
+
+        public override bool IsValid
+        {
+            get { return (Topic != null) && (Topic.Length > 10) && (Topic.Length < 50) && (Message !=null) && (Message.Length > 20) && (Priority > 0) && (Category > 0); }
         }
     }
 }

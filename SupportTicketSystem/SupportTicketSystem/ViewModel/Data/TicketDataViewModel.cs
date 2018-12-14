@@ -23,6 +23,7 @@ namespace SupportTicketSystem.ViewModel.Data
             {
                 DataObject().Topic = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsValid));
             }
         }
         public string Message
@@ -32,6 +33,7 @@ namespace SupportTicketSystem.ViewModel.Data
             {
                 DataObject().Message = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsValid));
             }
         }
         public List<Category> CategoryList
@@ -46,6 +48,7 @@ namespace SupportTicketSystem.ViewModel.Data
                 _categorySelected = value;
                 DataObject().Category = _categorySelected.CategoryId;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsValid));
             }
         }
 
@@ -61,9 +64,9 @@ namespace SupportTicketSystem.ViewModel.Data
                 _prioritySelected = value;
                 DataObject().Priority = _prioritySelected.PriorityId;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsValid));
             }
         }
-
         protected override string ItemDescription { get; }
     }
 }

@@ -50,7 +50,7 @@ namespace SupportTicketSystem.Model.Base
         protected override void Insert(T obj)
         {
             //int id = All.Select(o => o.GetId()).Max() + 1;
-            //obj.SetId(id);
+            obj.SetId(0);
 
             _dbContext.Set<T>().Add(obj);
             _dbContext.SaveChanges();

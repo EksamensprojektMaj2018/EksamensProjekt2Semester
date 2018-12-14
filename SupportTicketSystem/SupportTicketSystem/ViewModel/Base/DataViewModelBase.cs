@@ -27,6 +27,11 @@ namespace SupportTicketSystem.ViewModel.Base
         {
             _obj = obj;
         }
+
+        public bool IsValid
+        {
+            get { return DataObject().IsValid; }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

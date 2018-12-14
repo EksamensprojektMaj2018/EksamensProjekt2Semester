@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
-using SupportTicketSystem.Model;
 using SupportTicketSystem.Model.App;
 using SupportTicketSystem.Model.Catalog;
 
