@@ -20,16 +20,12 @@
     </Page.Resources>
     <Grid>
 
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>-->
-        
         <StackPanel HorizontalAlignment="Center" Width="600">
+            <TextBlock Style="{StaticResource TextBlockDetailsStyle}" Text="Opret en ticket" HorizontalAlignment="Center"/>
             <TextBlock Text="Overskrift:"/>
             <TextBox Text="{Binding ItemDetails.Topic, Mode=TwoWay}"/>
             <TextBlock Style="{StaticResource TextBlockDetailsStyle2}" Text="Beskrivelse:"/>
-            <TextBox Text="{Binding ItemDetails.Message, Mode=TwoWay}" />
+            <TextBox Text="{Binding ItemDetails.Message, Mode=TwoWay}" TextWrapping="Wrap" Height="200" />
             <TextBlock Text="Category:" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding ItemDetails.CategoryList}" SelectedItem="{Binding ItemDetails.CategorySelected, Mode=TwoWay}"/>
             <TextBlock Text="Priority:" Style="{StaticResource TextBlockDetailsStyle2}"/>
