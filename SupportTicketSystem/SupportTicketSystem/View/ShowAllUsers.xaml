@@ -30,21 +30,19 @@
 
 
 		<ListView Grid.Column="0" Grid.Row="0"
-		          ItemsSource="{Binding AllUsers}"
-		          SelectedItem="{Binding UserSelected, Mode=TwoWay}">
+		          ItemsSource="{Binding ItemDetails.AllUsers}"
+		          SelectedItem="{Binding ItemDetails.UserSelected, Mode=TwoWay}">
 		</ListView>
 
 		<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="10, 0, 0, 0">
             <TextBlock Text="Name:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.Name}" Style="{StaticResource TextBlockDetailsStyle2}"/>
-            <TextBlock Text="ID:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.UserId}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.Name}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Email:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.Email}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.Email}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Company:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.Company}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.Company}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Role:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding UserSelected.RoleText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.RoleList}" Style="{StaticResource TextBlockDetailsStyle2}"/>
 		</StackPanel>
 	</Grid>
 </Page>

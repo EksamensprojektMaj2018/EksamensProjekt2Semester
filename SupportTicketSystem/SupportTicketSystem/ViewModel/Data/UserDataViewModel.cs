@@ -8,9 +8,13 @@ namespace SupportTicketSystem.ViewModel.Data
     {
         public List<Role> _roleList;
         public Role _roleSelected;
+        public List<User> _userList;
+        public User _userSelected;
         public UserDataViewModel()
         {
             _roleList = DomainModel.GetCatalog<Role>().All;
+            _userList = DomainModel.GetCatalog<User>().All;
+            _userSelected = null;
         }
 
         public string Name
@@ -51,6 +55,20 @@ namespace SupportTicketSystem.ViewModel.Data
             {
                 _roleSelected = value;
                 DataObject().Role = _roleSelected.RoleId;
+                OnPropertyChanged();
+            }
+        }
+        public List<User> AllUsers
+        {
+            get { return _userList; }
+        }
+        public User UserSelected
+        {
+            get { return _userSelected; }
+            set
+            {
+                _userSelected = value;
+                DataObject().UserId = _userSelected.UserId;
                 OnPropertyChanged();
             }
         }
