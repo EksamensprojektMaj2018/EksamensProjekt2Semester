@@ -11,5 +11,10 @@
         {
             RoleId = id;
         }
+
+        public override string ToString()
+        {
+            return RoleName;
+        }
     }
 }

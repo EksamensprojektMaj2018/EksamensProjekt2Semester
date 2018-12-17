@@ -67,6 +67,17 @@ namespace SupportTicketSystem.ViewModel.Data
                 OnPropertyChanged(nameof(IsValid));
             }
         }
-        protected override string ItemDescription { get; }
+        public string CategoryText
+        {
+            get { return DomainModel.GetCatalog<Category>().Read(DataObject().Category).CategoryName; }
+        }
+        public string PriorityText
+        {
+            get { return DomainModel.GetCatalog<Priority>().Read(DataObject().Priority).PriorityName; }
+        }
+        protected override string ItemDescription
+        {
+            get { return DataObject().Topic; }
+        }
     }
 }

@@ -23,7 +23,6 @@ namespace SupportTicketSystem
             _password = "";
             _user = "";
             _userCatalog = (UserCatalog) DomainModel.GetCatalog<User>();
-            var test = DomainModel.GetCatalog<User>();
             _loginCommand = new LoginCommand(TheRootFrame, _userCatalog, this);
 
             

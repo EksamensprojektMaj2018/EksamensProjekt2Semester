@@ -44,23 +44,9 @@ namespace SupportTicketSystem.ViewModel.Data
                 OnPropertyChanged();
             }
         }
-        public List<Role> RoleList
+        public string RoleText
         {
-            get { return _roleList; }
-        }
-        public Role RoleSelected
-        {
-            get { return _roleSelected; }
-            set
-            {
-                _roleSelected = value;
-                DataObject().Role = _roleSelected.RoleId;
-                OnPropertyChanged();
-            }
-        }
-        public List<User> AllUsers
-        {
-            get { return _userList; }
+            get { return DomainModel.GetCatalog<Role>().Read(DataObject().Role).RoleName; }
         }
         public User UserSelected
         {
@@ -72,6 +58,9 @@ namespace SupportTicketSystem.ViewModel.Data
                 OnPropertyChanged();
             }
         }
-        protected override string ItemDescription { get; }
+        protected override string ItemDescription
+        {
+            get { return DataObject().Name; }
+        }
     }
 }

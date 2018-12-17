@@ -17,7 +17,7 @@
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="View/App/AppResources.xaml"/>
+                <ResourceDictionary Source="App/AppResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -30,19 +30,19 @@
 
 
         <ListView Grid.Column="0" Grid.Row="0"
-                  ItemsSource="{Binding AllTickets}"
-                  SelectedItem="{Binding TicketSelected, Mode=TwoWay}">
+                  ItemsSource="{Binding ItemCollection}"
+                  SelectedItem="{Binding ItemSelected, Mode=TwoWay}">
             
         </ListView>
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="10, 0, 0, 0" >
             <TextBlock Text="Emne:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Topic}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.Topic}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Prioritet:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.PriorityText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.PriorityText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Kategori:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.CategoryText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.CategoryText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Besked:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding TicketSelected.Message}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.Message}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             
         </StackPanel>
     </Grid>

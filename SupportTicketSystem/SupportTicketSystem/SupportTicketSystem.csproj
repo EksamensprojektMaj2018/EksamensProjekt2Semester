@@ -125,7 +125,7 @@
     <Compile Include="Command\App\UpdateCommand.cs" />
     <Compile Include="Command\Base\CRUDCommandBase.cs" />
     <Compile Include="Command\App\LoginCommand.cs" />
-    <Compile Include="CreateTicket.xaml.cs">
+    <Compile Include="View\CreateTicket.xaml.cs">
       <DependentUpon>CreateTicket.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\Domain\Category.cs" />
@@ -155,7 +155,7 @@
     <Compile Include="Data\Domain\Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Domain\Role.cs" />
-    <Compile Include="ShowAllTickets.xaml.cs">
+    <Compile Include="View\ShowAllTickets.xaml.cs">
       <DependentUpon>ShowAllTickets.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\Context\SupportticketdbContext.cs" />
@@ -205,7 +205,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CreateTicket.xaml">
+    <Page Include="View\CreateTicket.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -213,7 +213,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ShowAllTickets.xaml">
+    <Page Include="View\ShowAllTickets.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,10 +222,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ShowAllUsers.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\TicketView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -34,15 +34,16 @@ namespace SupportTicketSystem.ViewModel.Base
             get { return _itemSelected; }
             set
             {
-                // I Create-tilstand skal Details sættes til et nyt "tomt" objekt.
+                if (_status == PageViewModelStatus.Open)
+                {
+                    _itemSelected = value;
+                    _itemDetails = _itemSelected;
+                }
                 if (_status == PageViewModelStatus.Create)
                 {
                     _itemSelected = null;
                     _itemDetails = CreateDataViewModel(new T());
                 }
-
-                // I Update-tilstand skal Details sættes til en kopi af det objekt,
-                // Selected nu peger på.
                 if (_status == PageViewModelStatus.Closed)
                 {
                     _itemSelected = value;

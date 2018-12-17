@@ -30,8 +30,8 @@
 
 
 		<ListView Grid.Column="0" Grid.Row="0"
-		          ItemsSource="{Binding ItemDetails.AllUsers}"
-		          SelectedItem="{Binding ItemDetails.UserSelected, Mode=TwoWay}">
+		          ItemsSource="{Binding ItemCollection}"
+		          SelectedItem="{Binding ItemSelected, Mode=TwoWay}">
 		</ListView>
 
 		<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="10, 0, 0, 0">
@@ -42,7 +42,7 @@
             <TextBlock Text="Company:" Style="{StaticResource TextBlockDetailsStyle}"/>
             <TextBlock Text="{Binding ItemDetails.Company}" Style="{StaticResource TextBlockDetailsStyle2}"/>
             <TextBlock Text="Role:" Style="{StaticResource TextBlockDetailsStyle}"/>
-            <TextBlock Text="{Binding ItemDetails.RoleList}" Style="{StaticResource TextBlockDetailsStyle2}"/>
+            <TextBlock Text="{Binding ItemDetails.RoleText}" Style="{StaticResource TextBlockDetailsStyle2}"/>
 		</StackPanel>
 	</Grid>
 </Page>
