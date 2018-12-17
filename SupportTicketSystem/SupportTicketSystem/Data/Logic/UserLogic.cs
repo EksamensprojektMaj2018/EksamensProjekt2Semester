@@ -13,13 +13,13 @@ namespace SupportTicketSystem
         {
             UserId = id;
         }
-        public override string ToString()
-        {
-            return Name;
-        }
-        public string RoleText
-        {
-            get { return DomainModel.GetCatalog<Role>().Read(Role).RoleName; }
-        }
+        //public override string ToString()
+        //{
+        //    return Name;
+        //}
+        //public string RoleText
+        //{
+        //    get { return DomainModel.GetCatalog<Role>().Read(Role).RoleName; }
+        //}
     }
 }
