@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SupportTicketSystem.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.LoginCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAACAAQAAUAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Command\App\LoginCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.SupportticketdbContext" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAQIQAAAAAAAAAAAAEgAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Context\SupportticketdbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Category" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIgAEAAAAAAAAACAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Data\Domain\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Priority" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAEAAAAABAEAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Data\Domain\Priority.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Role" Collapsed="true">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACIAAAAAIAAEAAAAAAAAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>Data\Domain\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Ticket" Collapsed="true">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAIAAFAAgAAAgAAAAAABAAAAAAICIACAA=</HashCode>
+      <FileName>Data\Domain\Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.User" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAACAAIAAAEAAAAAwAAAAAAAACAAAABAIAAAA=</HashCode>
+      <FileName>Data\Domain\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.CreateTicket" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CreateTicket.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.ShowAllTickets" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ShowAllTickets.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.UserLoginPageViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAABIAAAAIAAAAAAAgAAAAIACCQAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Page\UserLoginPageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.Command.App.ClosedCommand&lt;T, TDataViewModel&gt;" Collapsed="true">
+    <Position X="15.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\App\ClosedCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Command.App.CreateCommand&lt;T, TDataViewModel&gt;" Collapsed="true">
+    <Position X="17.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\App\CreateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Command.App.NavigationCommand" Collapsed="true">
+    <Position X="8.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQAEEAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Command\App\NavigationCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Command.App.SetViewStatusCommand&lt;TDataViewModel&gt;" Collapsed="true">
+    <Position X="10.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\App\SetViewStatusCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Command.App.UpdateCommand&lt;T, TDataViewModel&gt;" Collapsed="true">
+    <Position X="13" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\App\UpdateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Command.Base.CommandBase" Collapsed="true">
+    <Position X="13" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\Base\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SupportTicketSystem.Command.Base.CRUDCommandBase&lt;T, TDataViewModel&gt;" Collapsed="true">
+    <Position X="15.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEBAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\Base\CRUDCommandBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Data.Base.DomainClassBase" Collapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAgAAAAAAgAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Data\Base\DomainClassBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SupportTicketSystem.Model.App.DomainModel" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEACAAAAEAAAAEAAAAAAAAAgAAAAAAQAAAAAAACAA=</HashCode>
+      <FileName>Model\App\DomainModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Base.CatalogAppBase&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\CatalogAppBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Base.CatalogBase&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAAABAAgAAEAAkAAAIAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\CatalogBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Base.CatalogEFBase&lt;T, TDBContext&gt;" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAQAAAAAAAABAAgAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\CatalogEFBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Catalog.CategoryCatalog" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Catalog\CategoryCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Catalog.PriorityCatalog" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Catalog\PriorityCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Catalog.RoleCatalog" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Catalog\RoleCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Catalog.TicketCatalog" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Catalog\TicketCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.Model.Catalog.UserCatalog">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Model\Catalog\UserCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.View.ShowAllUsers" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ShowAllUsers.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.View.Domain.UserLoginView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\UserLoginView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.MainPageViewModel" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAjAAGAQAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\App\MainPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.UserPageViewModel" Collapsed="true">
+    <Position X="0.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Page\UserPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Base.DataViewModelAppBase&lt;T&gt;" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Base\DataViewModelAppBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Base.DataViewModelBase&lt;T&gt;">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAABAAAAAAIAgAEAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Base\DataViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Base.PageViewModelAppBase&lt;T, TDataViewModel&gt;">
+    <Position X="2.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAQAIACAAAAAAAQEAgAAAwAAAAAQAAAgA=</HashCode>
+      <FileName>ViewModel\Base\PageViewModelAppBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Base.PageViewModelBase&lt;T, TDataViewModel&gt;" Collapsed="true">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIFAAAABEAAAAAKEAAAEIAwAAAACAAAAAAAAAIAQI=</HashCode>
+      <FileName>ViewModel\Base\PageViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Data.TicketDataViewModel">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAAAAAAAAACIAAACAAAAAAAKAAQAAIAAICEAAAg=</HashCode>
+      <FileName>ViewModel\Data\TicketDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Data.UserDataViewModel">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAACQAAAAAAQIAAACAAAAEAAABAAACAA=</HashCode>
+      <FileName>ViewModel\Data\UserDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Page.CreateTicketPageViewModel" Collapsed="true">
+    <Position X="2.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Page\CreateTicketPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SupportTicketSystem.ViewModel.Page.TicketPageViewModel" Collapsed="true">
+    <Position X="5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Page\TicketPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SupportTicketSystem.Command.Base.INotifiableCommand" Collapsed="true">
+    <Position X="25.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\Base\INotifiableCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SupportTicketSystem.Data.Base.IDomainClass" Collapsed="true">
+    <Position X="23.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAgAAAAAAgAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Data\Base\IDomainClass.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SupportTicketSystem.Model.Base.ICatalog&lt;T&gt;" Collapsed="true">
+    <Position X="20" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAgAAEAAEAAAIAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\ICatalog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SupportTicketSystem.ViewModel.Base.IDataViewModel&lt;T&gt;" Collapsed="true">
+    <Position X="21.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Base\IDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SupportTicketSystem.ViewModel.Base.IPageViewModel&lt;TDataViewModel&gt;" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAACAAAAAAAQAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Base\IPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SupportTicketSystem.ViewModel.Base.PageViewModelStatus">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAAAACAAAA=</HashCode>
+      <FileName>ViewModel\Base\PageViewModelStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
